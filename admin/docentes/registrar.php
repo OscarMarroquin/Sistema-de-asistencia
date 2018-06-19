@@ -14,7 +14,7 @@ require("permisos.php");
     <header>
         <div align="center">
          <br><br><br>
-						 <h1>REGISTRAR ALUMNOS</h1><img src="img/registrar.png" width="64px">
+						 <h1>REGISTRAR DOCENTES</h1><img src="img/registrar.png" width="64px">
 					 
 						   <form class="form-signin" action="codigo_registrar.php" method="POST" enctype="multipart/form-data">
 
@@ -42,7 +42,7 @@ require("permisos.php");
                      ?>
                      </div>     
      
-      <input type="text" class="form-control"  maxlength="9" onkeypress="return isNumberKey(event)"  name="cedula" placeholder="Matricula" required="" autofocus="" />
+      <input type="text" class="form-control"  maxlength="40" onkeypress="return isNumberKey(event)"  name="cedula" placeholder="Matricula" required="" autofocus="" />
       <input type="text" class="form-control"  maxlength="20" name="nombre" placeholder="Nombre" required=""/>
       <input type="text" class="form-control"  maxlength="20" name="apellido" placeholder="Apellido" required=""/>
       <label>Foto (JPG, PNG, GIF MAX 1 MB)  </label>

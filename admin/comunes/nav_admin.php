@@ -12,6 +12,7 @@
             <a href="#" data-toggle="dropdown" class="dropdown-toggle">Admin <b class="caret"></b></a>
             <ul class="dropdown-menu">
                   <li><a href="empleados">Alumnos</a></li>
+				   <li><a href="../docentes">Docentes</a></li>
                   <li><a href="marcados">Registro</a></li>
 				  <li><a href="graficas">Graficas</a></li>
                 <li><a href="cerrar_sesion.php">Salir</a></li>
