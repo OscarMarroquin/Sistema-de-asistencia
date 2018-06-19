@@ -6,13 +6,13 @@ require("comunes/head.php");
 require("permisos.php");
 require("conectar.php");
 
-if(!isset($_GET["cedula"])){
+if(!isset($_GET["matricula"])){
     header("location:index.php?error");
 }
 else{
-    $cedula = $_GET["cedula"];
+    $matricula = $_GET["matricula"];
 
-    $sql = "SELECT * FROM empleados WHERE cedula='$cedula'";
+    $sql = "SELECT * FROM docentes WHERE matricula='$matricula'";
 $result = $conn->query($sql);
 
 $row = $result->fetch_assoc();
@@ -58,7 +58,7 @@ $row = $result->fetch_assoc();
 require("../../conectar.php");
  
  
-$sql = "SELECT * FROM marcados INNER JOIN empleados ON marcados.cedula=empleados.cedula WHERE marcados.fecha='$fecha' AND marcados.cedula='$cedula' ORDER BY marcados.fecha_hora DESC";
+$sql = "SELECT * FROM marcados INNER JOIN docentes ON marcados.matricula=docentes.cedula WHERE marcados.fecha='$fecha' AND marcados.matricula='$matricula' ORDER BY marcados.fecha_hora DESC";
  
 $result = $conn->query($sql);
 

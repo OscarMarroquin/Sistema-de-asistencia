@@ -7,13 +7,13 @@ require("permisos.php");
 
 require("conectar.php");
 
-if(!isset($_GET["cedula"])){
+if(!isset($_GET["matricula"])){
     header("location:index.php?error");
 }
 else{
-   echo $cedula = $_GET["cedula"];
+   echo $matricula = $_GET["matricula"];
 
-    $sql = "SELECT * FROM empleados WHERE cedula='$cedula'";
+    $sql = "SELECT * FROM docentes WHERE matricula='$matricula'";
 $result = $conn->query($sql);
 
 $row = $result->fetch_assoc();
@@ -35,7 +35,7 @@ $count = mysqli_num_rows($result);
     <header>
         <div align="center">
          <br><br><br>
-						 <h1>EDITAR EMPLEADO</h1><img src="img/editar.png" width="64px">
+						 <h1>EDITAR DOCENTE</h1><img src="img/editar.png" width="64px">
 					 
 						   <form class="form-signin" action="codigo_editar.php?cedula=<?php echo $cedula; ?>" method="POST" enctype="multipart/form-data">
 

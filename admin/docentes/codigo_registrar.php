@@ -1,11 +1,11 @@
 <?php
- if (empty($_POST["cedula"]) or (empty($_POST["nombre"])) or (empty($_POST["apellido"])) ) {
+ if (empty($_POST["matricula"]) or (empty($_POST["nombre"])) or (empty($_POST["apellido"])) ) {
        header("location: registrar.php?error");
     }
  
  else{
   
-    $cedula = test_input($_POST["cedula"]);
+    $cedula = test_input($_POST["matricula"]);
     $nombre = test_input($_POST["nombre"]);
     $apellido = test_input($_POST["apellido"]);
   
@@ -44,7 +44,7 @@
  
     require("../../conectar.php");
  
-    $query = "INSERT INTO empleados (cedula, nombre, apellido, foto) VALUES ('$cedula','$nombre','$apellido','$userpic')";
+    $query = "INSERT INTO docentes (matricula, nombre, apellido, foto) VALUES ('$matricula','$nombre','$apellido','$userpic')";
     
     $result = mysqli_query($connect,$query);
     

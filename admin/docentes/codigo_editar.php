@@ -5,13 +5,13 @@
  
  else{
   
-    $cedula = $_GET["cedula"];
+    $matricula = $_GET["matricula"];
     $nombre = test_input($_POST["nombre"]);
     $apellido = test_input($_POST["apellido"]);
    
     require("../../conectar.php");
  
-    $query = "UPDATE empleados SET nombre='$nombre', apellido='$apellido' WHERE cedula='$cedula'";
+    $query = "UPDATE docentes SET nombre='$nombre', apellido='$apellido' WHERE matricula='$matricula'";
     
     $result = mysqli_query($connect,$query);
     
