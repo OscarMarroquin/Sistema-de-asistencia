@@ -13,7 +13,9 @@
             <ul class="dropdown-menu">
                   <li><a href="empleados">Alumnos</a></li>
                   <li><a href="marcados">Registro</a></li>
+				  <li><a href="graficas">Graficas</a></li>
                 <li><a href="cerrar_sesion.php">Salir</a></li>
+				
             </ul>
         </li>
     </ul>
